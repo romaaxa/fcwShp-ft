@@ -1,5 +1,4 @@
 import './App.css';
-import data from './data';
 import HomePage from './components/HomePage';
 import ProductPage from './components/ProductPage';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
