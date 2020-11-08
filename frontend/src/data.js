@@ -7,7 +7,7 @@ export default {
         price: 60,
         brand: 'Nike',
         rating: 4.5,
-        numReviews: 9,
+        numReviews: 11,
     },
     {
         _id: '2',

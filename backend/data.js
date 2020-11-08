@@ -8,6 +8,7 @@ export default {
         brand: 'Nike',
         rating: 4.5,
         numReviews: 9,
+        countInStock: 0,
     },
     {
         _id: '2',
@@ -18,6 +19,7 @@ export default {
         brand: 'Nikeee',
         rating: 4.2,
         numReviews: 10,
+        countInStock: 7,
     },
     {
         _id: '3',
@@ -28,6 +30,7 @@ export default {
         brand: 'Nikew',
         rating: 4.3,
         numReviews: 11,
+        countInStock: 8,
     },
     {
         _id: '4',
@@ -38,6 +41,7 @@ export default {
         brand: 'Nikee',
         rating: 4.7,
         numReviews: 13,
+        countInStock: 11,
     },
     ]
 }
