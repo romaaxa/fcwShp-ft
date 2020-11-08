@@ -1,6 +1,6 @@
 import './App.css';
-import HomePage from './components/HomePage';
-import ProductPage from './components/ProductPage';
+import HomePage from './screenPages/HomePage';
+import ProductPage from './screenPages/ProductPage';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const openMenu = () => {
