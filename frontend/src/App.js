@@ -1,6 +1,7 @@
 import './App.css';
 import HomePage from './screenPages/HomePage';
 import ProductPage from './screenPages/ProductPage';
+import CartPage from './screenPages/CartPage';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 const openMenu = () => {
@@ -50,6 +51,7 @@ const App = () => {
         <main className="main">
           <div className="content">
             <Route path="/product/:id" component={ProductPage} />
+            <Route path="/cart/:id?" component={CartPage} />
             <Route path="/" exact={true} component={HomePage} />
           </div>
 
@@ -57,7 +59,7 @@ const App = () => {
 
         <footer className="footer">
           All right reserved.
-      </footer>
+        </footer>
       </div>
     </BrowserRouter>
   );
