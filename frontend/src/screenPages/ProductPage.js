@@ -73,7 +73,7 @@ const ProductPage = (props) => {
                                         </select>
                                     </li>
                                     <li>
-                                        {product.countInStock > 0 && <button className="button" onClick={handleAddToCart}>Add to cart</button>}
+                                        {product.countInStock > 0 && <button className="button-primary" onClick={handleAddToCart}>Add to cart</button>}
                                     </li>
                                 </ul>
                             </div>

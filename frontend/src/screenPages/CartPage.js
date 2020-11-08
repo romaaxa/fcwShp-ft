@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../actions/cartActions';
+import { Link } from 'react-router-dom';
+import { addToCart, removeFromCart } from '../actions/cartActions';
 
 const CartPage = (props) => {
     const cart = useSelector(state => state.cart);
@@ -11,6 +12,10 @@ const CartPage = (props) => {
 
     const hmProducts = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
     const dispatch = useDispatch();
+
+    const removeFromCartHandler = (productId) => {
+        dispatch(removeFromCart(productId));
+    }
 
     useEffect(() => {
         if (productId) {
@@ -33,7 +38,9 @@ const CartPage = (props) => {
                                 <div>
                                     <img src={item.image} alt="product" />
                                     <div className="cart-name">
-                                        <div>{item.name}</div>
+                                        <Link to={"/product/" + item.product}>
+                                            {item.name}
+                                        </Link>
 
                                         <div>
                                             Number: <select>
@@ -43,10 +50,13 @@ const CartPage = (props) => {
                                                 <option value="4">4</option>
                                                 <option value="5">5</option>
                                             </select>
+                                            <button className="delete-button" type="button" onClick={() => removeFromCartHandler(item.product)}>
+                                                Delete
+                                            </button>
                                         </div>
                                     </div>
                                     <div>
-                                        {item.price}
+                                        ${item.price}
                                     </div>
                                 </div>
                             )
@@ -54,12 +64,16 @@ const CartPage = (props) => {
                 </ul>
             </div>
             <div className="cart-action">
-                <h3>Subtotal ({cartItems.reduce((a, c) => a + c.hmProducts, 0)} items) : $ {cartItems.reduce((a, c) => a + c.price * c.hmProducts, 0)}</h3>
+                <h3>
+                    Subtotal ( {cartItems.reduce((a, c) => a + c.hmProducts, 0)} items)
+                    :
+                    $ {cartItems.reduce((a, c) => a + c.price * c.hmProducts, 0)}
+                </h3>
                 <button className="button-primary" disabled={cartItems.length === 0}>
                     Proceed to checkout
                 </button>
             </div>
-        </div>
+        </div >
     )
 }
 
