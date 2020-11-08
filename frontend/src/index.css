@@ -242,6 +242,12 @@ a:hover {
 }
 
 /* Cart */
+.button-delete {
+  height: 3rem;
+  margin-left: 1.5rem;
+  border-radius: .5rem;
+}
+
 .cart {
   display: flex;
   flex-wrap: wrap;
@@ -298,4 +304,9 @@ a:hover {
   flex: 1 1;
   font-size: 2.5rem;
   text-align: right;
+}
+
+.cart-img {
+  height: 100rem;
+  width: 100rem;
 }

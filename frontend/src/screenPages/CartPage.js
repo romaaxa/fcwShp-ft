@@ -40,7 +40,7 @@ const CartPage = (props) => {
                             <div>Cart is empty!</div> :
                             cartItems.map(item =>
                                 <div>
-                                    <img src={item.image} alt="product" />
+                                    <img src={item.image} className="cart-img" alt="product" />
                                     <div className="cart-name">
                                         <Link to={"/product/" + item.product}>
                                             {item.name}
@@ -53,7 +53,7 @@ const CartPage = (props) => {
                                                     <option key={x + 1} value={x + 1}>{x + 1}</option>
                                                 )}
                                             </select>
-                                            <button className="delete-button" type="button" onClick={() => removeFromCartHandler(item.product)}>
+                                            <button className="button-delete" type="button" onClick={() => removeFromCartHandler(item.product)}>
                                                 Delete
                                             </button>
                                         </div>
