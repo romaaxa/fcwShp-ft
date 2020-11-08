@@ -21,7 +21,11 @@ const CartPage = (props) => {
         if (productId) {
             dispatch(addToCart(productId, hmProducts));
         }
-    }, [])
+    }, []);
+
+    const checkoutHandler = () => {
+        props.history.push("/signing?redirect=shipping");
+    }
 
     return (
         <div className="cart">
@@ -43,12 +47,11 @@ const CartPage = (props) => {
                                         </Link>
 
                                         <div>
-                                            Number: <select>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
+                                            Number:
+                                            <select value={item.hmProducts} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}> {/* isn't working onChange */}
+                                                {[...Array(item.countInStock).keys()].map(x =>
+                                                    <option key={x + 1} value={x + 1}>{x + 1}</option>
+                                                )}
                                             </select>
                                             <button className="delete-button" type="button" onClick={() => removeFromCartHandler(item.product)}>
                                                 Delete
@@ -69,7 +72,7 @@ const CartPage = (props) => {
                     :
                     $ {cartItems.reduce((a, c) => a + c.price * c.hmProducts, 0)}
                 </h3>
-                <button className="button-primary" disabled={cartItems.length === 0}>
+                <button onClick={checkoutHandler} className="button-primary" disabled={cartItems.length === 0}>
                     Proceed to checkout
                 </button>
             </div>
