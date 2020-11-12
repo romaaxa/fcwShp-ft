@@ -3,6 +3,7 @@ import HomePage from './screenPages/HomePage';
 import ProductPage from './screenPages/ProductPage';
 import CartPage from './screenPages/CartPage';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+import SigninPage from './screenPages/SigninPage';
 
 const openMenu = () => {
   document.querySelector(".sidebar").classList.add("open");
@@ -28,7 +29,7 @@ const App = () => {
 
           <div className="header-links">
             <a href="cart.html">Cart</a>
-            <a href="signin.html">Sign In</a>
+            <Link to="/signin">Sign In</Link>
           </div>
         </header>
 
@@ -50,6 +51,7 @@ const App = () => {
 
         <main className="main">
           <div className="content">
+            <Route path="/signin" component={SigninPage} />
             <Route path="/product/:id" component={ProductPage} />
             <Route path="/cart/:id?" component={CartPage} />
             <Route path="/" exact={true} component={HomePage} />
