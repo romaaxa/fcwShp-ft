@@ -4,6 +4,8 @@ import ProductPage from './screenPages/ProductPage';
 import CartPage from './screenPages/CartPage';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import SigninPage from './screenPages/SigninPage';
+import { useSelector } from 'react-redux';
+import RegisterPage from './screenPages/RegisterPage';
 
 const openMenu = () => {
   document.querySelector(".sidebar").classList.add("open");
@@ -14,6 +16,9 @@ const closeMenu = () => {
 }
 
 const App = () => {
+  const userSignin = useSelector(state => state.userSignin);
+  const { userInfo } = userSignin;
+
   return (
     <BrowserRouter>
       <div className="grid-container">
@@ -29,7 +34,11 @@ const App = () => {
 
           <div className="header-links">
             <a href="cart.html">Cart</a>
-            <Link to="/signin">Sign In</Link>
+            {
+              userInfo ? <Link to="/profile">{userInfo.name}</Link> :
+                <Link to="/signin">Sign In</Link>
+            }
+
           </div>
         </header>
 
@@ -52,6 +61,7 @@ const App = () => {
         <main className="main">
           <div className="content">
             <Route path="/signin" component={SigninPage} />
+            <Route path="/register" component={RegisterPage} />
             <Route path="/product/:id" component={ProductPage} />
             <Route path="/cart/:id?" component={CartPage} />
             <Route path="/" exact={true} component={HomePage} />
