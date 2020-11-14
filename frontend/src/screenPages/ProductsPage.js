@@ -53,7 +53,7 @@ const ProductsPage = (props) => {
 
                     <li>
                         {loadingSave && <div>Loading...</div>}
-                        {errorSave && <div>{error}</div>}
+                        {errorSave && <div>{errorSave}</div>}
                     </li>
 
                     <li>
