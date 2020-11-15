@@ -73,7 +73,7 @@ const RegisterPage = (props) => {
                             Re-Password
                         </label>
 
-                        <input type="rePassword" name="rePassword" id="rePassword" onChange={(e) => setRePassword(e.target.value)}>
+                        <input type="password" name="rePassword" id="rePassword" onChange={(e) => setRePassword(e.target.value)}>
                         </input>
                     </li>
 
