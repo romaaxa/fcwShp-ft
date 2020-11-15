@@ -60,11 +60,11 @@ const ProductsPage = (props) => {
             countInStock,
             description,
         }));
-    }
+    };
 
     const deleteHandler = (product) => {
         dispatch(deleteProduct(product._id));
-    }
+    };
 
     return (
         <div>
@@ -177,7 +177,7 @@ const ProductsPage = (props) => {
                         </thead>
                         <tbody>
                             {products.map(product => (
-                                <tr>
+                                <tr key={product._id}>
                                     <td>{product._id}</td>
                                     <td>{product.name}</td>
                                     <td>{product.price}</td>

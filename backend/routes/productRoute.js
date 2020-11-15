@@ -50,7 +50,7 @@ router.put('/:id', async (req, res) => {
     return res.status(500).send({ message: ' Error in Updating Product.' });
 });
 
-router.delete('/:id', isAuth, isAdmin, async (req, res) => {
+router.delete('/:id', async (req, res) => {
     const deletedProduct = await Product.findById(req.params.id);
     if (deletedProduct) {
         await deletedProduct.remove();
