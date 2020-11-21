@@ -14,9 +14,11 @@ const RegisterPage = (props) => {
 
     const dispatch = useDispatch();
 
+    const redirect = props.location.search ? props.location.search.split("=")[1] : '/';
+
     useEffect(() => {
         if (userInfo) {
-            props.history.push("/");
+            props.history.push(redirect);
         }
         return () => {
             //
@@ -86,7 +88,8 @@ const RegisterPage = (props) => {
                     </li>
 
                     <li>
-                        <Link to="/signin" className="button secondary text-center">Sign In</Link>
+                        <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center">Sign-In</Link>
+
                     </li>
                 </ul>
             </form>

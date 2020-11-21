@@ -7,6 +7,7 @@ import SigninPage from './screenPages/SigninPage';
 import { useSelector } from 'react-redux';
 import RegisterPage from './screenPages/RegisterPage';
 import ProductsPage from './screenPages/ProductsPage';
+import ShippingPage from './screenPages/ShippingPage';
 
 const openMenu = () => {
   document.querySelector(".sidebar").classList.add("open");
@@ -62,6 +63,7 @@ const App = () => {
         <main className="main">
           <div className="content">
             <Route path="/products" component={ProductsPage} />
+            <Route path="/shipping" component={ShippingPage} />
             <Route path="/signin" component={SigninPage} />
             <Route path="/register" component={RegisterPage} />
             <Route path="/product/:id" component={ProductPage} />
