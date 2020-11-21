@@ -8,6 +8,8 @@ import { useSelector } from 'react-redux';
 import RegisterPage from './screenPages/RegisterPage';
 import ProductsPage from './screenPages/ProductsPage';
 import ShippingPage from './screenPages/ShippingPage';
+import PaymentPage from './screenPages/PaymentPage';
+import PlaceorderPage from './screenPages/PlaceorderPage';
 
 const openMenu = () => {
   document.querySelector(".sidebar").classList.add("open");
@@ -64,6 +66,8 @@ const App = () => {
           <div className="content">
             <Route path="/products" component={ProductsPage} />
             <Route path="/shipping" component={ShippingPage} />
+            <Route path="/payment" component={PaymentPage} />
+            <Route path="/placeorder" component={PlaceorderPage} />
             <Route path="/signin" component={SigninPage} />
             <Route path="/register" component={RegisterPage} />
             <Route path="/product/:id" component={ProductPage} />
