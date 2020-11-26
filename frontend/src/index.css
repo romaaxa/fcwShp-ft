@@ -7,6 +7,8 @@ body {
   font: 1.6rem Helvetica;
   height: 100vh;
   margin: 0;
+  /* background: url("./images/background.jpg") no-repeat; */
+  background-color: #141313;
 }
 
 button {
@@ -20,8 +22,7 @@ button {
 
 .grid-container {
   display: grid;
-  grid-template-areas:
-    "header"
+  grid-template-areas: "header"
     "main"
     "footer";
   grid-template-columns: 1fr;
@@ -31,12 +32,16 @@ button {
 
 .header {
   grid-area: header;
-  background-color: #203040;
+  background-color: #4a454e;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 9rem;
 }
 
 .brand a {
@@ -50,7 +55,7 @@ button {
   color: #ffffff;
   text-decoration: none;
   padding: 1rem;
-
+  margin-right: 5rem;
 }
 
 .header-links a:hover {
@@ -63,11 +68,15 @@ button {
 
 .footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: #4a454e;
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 5rem;
+  bottom: 0;
 }
 
 a {
@@ -84,6 +93,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 7rem;
 }
 
 .products li {
@@ -107,14 +117,20 @@ a:hover {
   font-weight: bold;
 }
 
+.product-name a {
+  color: #423e49 !important;
+  text-decoration: none;
+}
+
 .product-brand {
-  font-size: 1.2rem;
-  color: #808080;
+  font-size: 2rem;
+  color: #f0f0f0;
 }
 
 .product-price {
   font-size: 2rem;
   font-weight: bold;
+  color: #f0f0f0;
 }
 
 .product-image {
@@ -124,6 +140,7 @@ a:hover {
 
 .product-rating {
   margin-bottom: 1rem;
+  color: #f0f0f0;
 }
 
 /* Sidebar */
@@ -142,8 +159,13 @@ a:hover {
   transition: all .5se;
   transform: translateX(-30rem);
   width: 30rem;
-  background-color: #f0f0f0;
+  background-color: #6a646e;
   height: 100%;
+}
+
+.sidebar h3 {
+  display: flex;
+  margin-left: 2.5rem;
 }
 
 .sidebar.open {
@@ -164,9 +186,18 @@ a:hover {
   top: 1.5rem
 }
 
-.menuListItem {
-  font-size: large;
+.sidebar .menuListItem {
+  color: #000000;
+  font-size: 2rem;
   text-decoration: none;
+}
+
+.menuListItem:hover {
+  color: #f0f0f0;
+}
+
+.categoriesList {
+  padding-left: 2.5rem;
 }
 
 /* Product Details */
@@ -357,6 +388,10 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.content {
+  padding-top: 5rem;
 }
 
 .content-margined {

@@ -32,8 +32,7 @@ const App = () => {
             <button onClick={openMenu}>
               &#9776;
             </button>
-
-            <Link to="/" >FutureTech.</Link>
+            <Link to="/">FutureTech.</Link>
           </div>
 
           <div className="header-links">
@@ -50,16 +49,31 @@ const App = () => {
           <h3>Shopping Categories</h3>
 
           <button className="sidebar-close-button" onClick={closeMenu}>x</button>
-
-          <ul>
-            <li>
-              <a href="index.html" className="menuListItem">Pants</a>
-            </li>
-
-            <li>
-              <a href="index.html" className="menuListItem">Shirts</a>
-            </li>
-          </ul>
+          <div className="categoriesList">
+            <div>
+              <a href="index.html" className="menuListItem">/Laptops</a>
+            </div>
+            <br />
+            <div>
+              <a href="index.html" className="menuListItem">/MobilePhones</a>
+            </div>
+            <br />
+            <div>
+              <a href="index.html" className="menuListItem">/HeadpHones</a>
+            </div>
+            <br />
+            <div>
+              <a href="index.html" className="menuListItem">/Accesories</a>
+            </div>
+            <br />
+            <div>
+              <a href="index.html" className="menuListItem">/TV's</a>
+            </div>
+            <br />
+            <div>
+              <a href="index.html" className="menuListItem">/Other</a>
+            </div>
+          </div>
         </aside>
 
         <main className="main">
@@ -81,7 +95,7 @@ const App = () => {
           All right reserved.
         </footer>
       </div>
-    </BrowserRouter>
+    </BrowserRouter >
   );
 }
 
