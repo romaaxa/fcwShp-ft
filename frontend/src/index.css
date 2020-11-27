@@ -115,6 +115,7 @@ a:hover {
 .product-name {
   font-size: 2rem;
   font-weight: bold;
+  margin-top: -2rem;
 }
 
 .product-name a {
@@ -125,12 +126,21 @@ a:hover {
 .product-brand {
   font-size: 2rem;
   color: #f0f0f0;
+  margin-top: -3rem;
 }
 
 .product-price {
   font-size: 2rem;
   font-weight: bold;
   color: #f0f0f0;
+  margin-top: -3rem;
+}
+
+.product-description {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f0f0f0;
+  margin-top: -3rem;
 }
 
 .product-image {
@@ -210,6 +220,11 @@ a:hover {
   padding: 1rem;
 }
 
+.details li {
+  color: #f0f0f0;
+  font-size: 2rem;
+}
+
 .details-image {
   flex: 2 1 60rem;
 }
@@ -225,6 +240,10 @@ a:hover {
 
 .details-action {
   flex: 1 1 30rem;
+}
+
+.details-action li {
+  color: #000000;
 }
 
 .details-info ul,
@@ -294,6 +313,12 @@ a:hover {
   align-items: flex-start;
 }
 
+.cartItem-elem {
+  padding-bottom: 5rem;
+  color: #f0f0f0;
+  font-size: 2rem;
+}
+
 .cart-list {
   flex: 3 1 60rem;
 }
@@ -314,7 +339,7 @@ a:hover {
 .cart-list-container li {
   display: flex;
   justify-content: space-between;
-
+  color: #f0f0f0;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 0.1rem #c0c0c0 solid;
@@ -336,18 +361,18 @@ a:hover {
 }
 
 .cart-name {
+  padding-top: 5rem;
   flex: 8 1;
 }
 
 .cart-price {
   flex: 1 1;
   font-size: 2.5rem;
-  text-align: right;
 }
 
 .cart-img {
-  height: 100rem;
-  width: 100rem;
+  height: 30rem;
+  width: 40rem;
 }
 
 /* forms */

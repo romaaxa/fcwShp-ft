@@ -39,11 +39,11 @@ const CartPage = (props) => {
                         cartItems.length === 0 ?
                             <div>Cart is empty!</div> :
                             cartItems.map(item =>
-                                <div>
+                                <div className="cartItem-elem">
                                     <img src={item.image} className="cart-img" alt="product" />
                                     <div className="cart-name">
                                         <Link to={"/product/" + item.product}>
-                                            {item.name}
+                                            <div style={{ color: "white" }}>{item.name}</div>
                                         </Link>
 
                                         <div>
@@ -58,7 +58,7 @@ const CartPage = (props) => {
                                             </button>
                                         </div>
                                     </div>
-                                    <div>
+                                    <div style={{ textAlign: "right" }}>
                                         ${item.price}
                                     </div>
                                 </div>

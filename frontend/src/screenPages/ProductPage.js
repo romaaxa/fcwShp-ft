@@ -23,7 +23,7 @@ const ProductPage = (props) => {
     return (
         <div>
             <div className="back-to-result">
-                <Link to="/" >Back to result</Link>
+                <Link to="/" style={{ color: "white" }}>Back to result</Link>
             </div>
 
             {loading ? <div>Loading...</div> :

@@ -36,7 +36,7 @@ const App = () => {
           </div>
 
           <div className="header-links">
-            <a href="cart.html">Cart</a>
+            <Link to="/cart">Cart</Link>
             {
               userInfo ? <Link to="/profile">{userInfo.name}</Link> :
                 <Link to="/signin">Sign In</Link>
