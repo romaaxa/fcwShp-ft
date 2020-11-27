@@ -392,6 +392,7 @@ a:hover {
   border: 0.1rem #c0c0c0 solid;
   border-radius: 0.5rem;
   list-style-type: none;
+  background-color: #f0f0f0;
 }
 
 .form-container li {

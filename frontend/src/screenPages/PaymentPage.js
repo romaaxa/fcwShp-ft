@@ -31,10 +31,40 @@ const PaymentPage = (props) => {
                                     type="radio"
                                     name="paymentMethod"
                                     id="paymentMethod"
+                                    value="qiwi"
+                                    onChange={(e) => setPaymentMethod(e.target.value)}
+                                ></input>
+                                <label for="paymentMethod">QIWI</label>
+                            </div>
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    id="paymentMethod"
                                     value="paypal"
                                     onChange={(e) => setPaymentMethod(e.target.value)}
                                 ></input>
                                 <label for="paymentMethod">Paypal</label>
+                            </div>
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    id="paymentMethod"
+                                    value="payoneer"
+                                    onChange={(e) => setPaymentMethod(e.target.value)}
+                                ></input>
+                                <label for="paymentMethod">Payoneer</label>
+                            </div>
+                            <div>
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    id="paymentMethod"
+                                    value="yandex"
+                                    onChange={(e) => setPaymentMethod(e.target.value)}
+                                ></input>
+                                <label for="paymentMethod">Yandex</label>
                             </div>
                         </li>
 

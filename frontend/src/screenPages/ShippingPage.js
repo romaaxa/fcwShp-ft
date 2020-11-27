@@ -31,7 +31,7 @@ const ShippingPage = (props) => {
                         <li>
                             <label htmlFor="address">
                                 Address
-                        </label>
+                            </label>
 
                             <input type="text" name="address" id="address" onChange={(e) => setAddress(e.target.value)}>
                             </input>
@@ -40,7 +40,7 @@ const ShippingPage = (props) => {
                         <li>
                             <label htmlFor="city">
                                 City
-                        </label>
+                            </label>
 
                             <input type="text" name="city" id="city" onChange={(e) => setCity(e.target.value)}>
                             </input>
@@ -49,7 +49,7 @@ const ShippingPage = (props) => {
                         <li>
                             <label htmlFor="postalCode">
                                 Postal Code
-                        </label>
+                            </label>
 
                             <input type="text" name="postalCode" id="postalCode" onChange={(e) => setPostalCode(e.target.value)}>
                             </input>
@@ -58,7 +58,7 @@ const ShippingPage = (props) => {
                         <li>
                             <label htmlFor="country">
                                 Country
-                        </label>
+                            </label>
 
                             <input type="text" name="country" id="country" onChange={(e) => setCountry(e.target.value)}>
                             </input>
