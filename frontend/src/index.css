@@ -424,6 +424,11 @@ input {
   margin: 1rem;
 }
 
+.contentAdmin {
+  padding-top: 5rem;
+  background-color: #959292;
+}
+
 table {
   width: 100%;
 }

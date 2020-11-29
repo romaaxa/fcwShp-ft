@@ -80,7 +80,7 @@ const RegisterPage = (props) => {
                     </li>
 
                     <li>
-                        <button type="submit" className="button-primary">Sign In</button>
+                        <button type="submit" className="button-primary">Register</button>
                     </li>
 
                     <li>
@@ -89,7 +89,6 @@ const RegisterPage = (props) => {
 
                     <li>
                         <Link to={redirect === "/" ? "signin" : "signin?redirect=" + redirect} className="button secondary text-center">Sign-In</Link>
-
                     </li>
                 </ul>
             </form>
