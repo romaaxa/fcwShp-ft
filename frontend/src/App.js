@@ -10,6 +10,7 @@ import ProductsPage from './screenPages/ProductsPage';
 import ShippingPage from './screenPages/ShippingPage';
 import PaymentPage from './screenPages/PaymentPage';
 import PlaceorderPage from './screenPages/PlaceorderPage';
+import ProfilePage from './screenPages/ProfilePage';
 
 const openMenu = () => {
   document.querySelector(".sidebar").classList.add("open");
@@ -78,6 +79,7 @@ const App = () => {
 
         <main className="main">
           <div className="content">
+            <Route path="/profile" component={ProfilePage} />
             <Route path="/products" component={ProductsPage} />
             <Route path="/shipping" component={ShippingPage} />
             <Route path="/payment" component={PaymentPage} />
@@ -88,7 +90,6 @@ const App = () => {
             <Route path="/cart/:id?" component={CartPage} />
             <Route path="/" exact={true} component={HomePage} />
           </div>
-
         </main>
 
         <footer className="footer">
