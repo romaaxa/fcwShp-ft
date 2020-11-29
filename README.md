@@ -11,5 +11,9 @@ localhost:5000 - Express server;
 
 URLs: {
    localhost:5000/api/products,
-   localhost:5000/api/users/createadmin,
+   localhost:5000/api/users/createadmin
+}
+
+isAdmin URLs: {
+   localhost:3000/products
 }
