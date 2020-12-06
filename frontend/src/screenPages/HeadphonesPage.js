@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 
-const MobilePhonesPage = () => {
+const HeadphonesPage = () => {
     const productList = useSelector(state => state.productList);
     const { products, loading, error } = productList;
 
@@ -16,7 +16,7 @@ const MobilePhonesPage = () => {
         };
     }, [])
 
-    let productLaptop = products.filter((prod) => prod.category === 'mobilephones');
+    let productLaptop = products.filter((prod) => prod.category === 'headphones');
     return loading ? <div>Loading...</div> :
         error ? <div>{error}</div> :
             <ul className="products">
@@ -45,4 +45,4 @@ const MobilePhonesPage = () => {
             </ul>
 }
 
-export default MobilePhonesPage;
+export default HeadphonesPage;
