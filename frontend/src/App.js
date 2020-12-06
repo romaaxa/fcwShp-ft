@@ -11,6 +11,7 @@ import ShippingPage from './screenPages/ShippingPage';
 import PaymentPage from './screenPages/PaymentPage';
 import PlaceorderPage from './screenPages/PlaceorderPage';
 import ProfilePage from './screenPages/ProfilePage';
+import LaptopsPage from './screenPages/LaptopsPage';
 
 const openMenu = () => {
   document.querySelector(".sidebar").classList.add("open");
@@ -52,7 +53,7 @@ const App = () => {
           <button className="sidebar-close-button" onClick={closeMenu}>x</button>
           <div className="categoriesList">
             <div>
-              <a href="index.html" className="menuListItem">/Laptops</a>
+              <Link to="/filter/laptops" className="menuListItem">/Laptops</Link>
             </div>
             <br />
             <div>
@@ -89,6 +90,7 @@ const App = () => {
             <Route path="/product/:id" component={ProductPage} />
             <Route path="/cart/:id?" component={CartPage} />
             <Route path="/" exact={true} component={HomePage} />
+            <Route path="/filter/laptops" component={LaptopsPage} />
           </div>
         </main>
 
