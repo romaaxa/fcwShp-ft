@@ -57,23 +57,23 @@ const App = () => {
             </div>
             <br />
             <div>
-              <a href="index.html" className="menuListItem">/MobilePhones</a>
+              <Link to="/filter/mobilephones" className="menuListItem">/Mobile Phones</Link>
             </div>
             <br />
             <div>
-              <a href="index.html" className="menuListItem">/HeadpHones</a>
+              <Link to="/filter/headphones" className="menuListItem">/Headphones</Link>
             </div>
             <br />
             <div>
-              <a href="index.html" className="menuListItem">/Accesories</a>
+              <Link to="/filter/accessories" className="menuListItem">/accessories</Link>
             </div>
             <br />
             <div>
-              <a href="index.html" className="menuListItem">/TV's</a>
+              <Link to="/filter/tvs" className="menuListItem">/TV's</Link>
             </div>
             <br />
             <div>
-              <a href="index.html" className="menuListItem">/Other</a>
+              <Link to="/filter/other" className="menuListItem">/Other</Link>
             </div>
           </div>
         </aside>
