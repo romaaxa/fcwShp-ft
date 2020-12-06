@@ -14,6 +14,7 @@ import ProfilePage from './screenPages/ProfilePage';
 import LaptopsPage from './screenPages/LaptopsPage';
 import MobilePhonesPage from './screenPages/MobilePhonesPage';
 import HeadphonesPage from './screenPages/HeadphonesPage';
+import AccessoriesPage from './screenPages/AccessoriesPage';
 
 const openMenu = () => {
   document.querySelector(".sidebar").classList.add("open");
@@ -67,7 +68,7 @@ const App = () => {
             </div>
             <br />
             <div>
-              <Link to="/filter/accessories" className="menuListItem">/accessories</Link>
+              <Link to="/filter/accessories" className="menuListItem">/Accessories</Link>
             </div>
             <br />
             <div>
@@ -95,6 +96,7 @@ const App = () => {
             <Route path="/filter/laptops" component={LaptopsPage} />
             <Route path="/filter/mobilephones" component={MobilePhonesPage} />
             <Route path="/filter/headphones" component={HeadphonesPage} />
+            <Route path="/filter/accessories" component={AccessoriesPage} />
           </div>
         </main>
 
