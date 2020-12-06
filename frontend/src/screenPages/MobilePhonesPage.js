@@ -16,7 +16,7 @@ const LaptopsPage = () => {
         };
     }, [])
 
-    let productLaptop = products.filter((prod) => prod.category === 'laptop');
+    let productLaptop = products.filter((prod) => prod.category === 'mobilephones');
     return loading ? <div>Loading...</div> :
         error ? <div>{error}</div> :
             <ul className="products">

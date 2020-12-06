@@ -12,6 +12,7 @@ import PaymentPage from './screenPages/PaymentPage';
 import PlaceorderPage from './screenPages/PlaceorderPage';
 import ProfilePage from './screenPages/ProfilePage';
 import LaptopsPage from './screenPages/LaptopsPage';
+import MobilePhonesPage from './screenPages/MobilePhonesPage';
 
 const openMenu = () => {
   document.querySelector(".sidebar").classList.add("open");
@@ -91,6 +92,7 @@ const App = () => {
             <Route path="/cart/:id?" component={CartPage} />
             <Route path="/" exact={true} component={HomePage} />
             <Route path="/filter/laptops" component={LaptopsPage} />
+            <Route path="/filter/mobilephones" component={MobilePhonesPage} />
           </div>
         </main>
 
