@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { signin } from '../actions/userActions';
-import { listProducts, saveProduct, deleteProduct } from '../actions/productActions';
+import React, {useEffect, useState} from 'react';
+import {Link} from 'react-router-dom';
+import {useDispatch, useSelector} from 'react-redux';
+import {signin} from '../actions/userActions';
+import {listProducts, saveProduct, deleteProduct} from '../actions/productActions';
 
 const ProductsPage = (props) => {
     const [modalVisible, setModalVisible] = useState(false);
@@ -16,13 +16,13 @@ const ProductsPage = (props) => {
     const [description, setDescription] = useState('');
 
     const productList = useSelector(state => state.productList);
-    const { loading, products, error } = productList;
+    const {loading, products, error} = productList;
 
     const productSave = useSelector(state => state.productSave);
-    const { loading: loadingSave, success: successSave, error: errorSave } = productSave;
+    const {loading: loadingSave, success: successSave, error: errorSave} = productSave;
 
     const productDelete = useSelector(state => state.productDelete);
-    const { loading: loadingDelete, success: successDelete, error: errorDelete } = productDelete;
+    const {loading: loadingDelete, success: successDelete, error: errorDelete} = productDelete;
 
     const dispatch = useDispatch();
 
@@ -75,123 +75,127 @@ const ProductsPage = (props) => {
                 </div>
 
                 {modalVisible &&
-                    <div className="form">
-                        <form onSubmit={submitHandler}>
-                            <ul className="form-container">
-                                <li>
-                                    <h3>Create product</h3>
-                                </li>
+                <div className="form">
+                    <form onSubmit={submitHandler}>
+                        <ul className="form-container">
+                            <li>
+                                <h3>Create product</h3>
+                            </li>
 
-                                <li>
-                                    {loadingSave && <div>Loading...</div>}
-                                    {errorSave && <div>{errorSave}</div>}
-                                </li>
+                            <li>
+                                {loadingSave && <div>Loading...</div>}
+                                {errorSave && <div>{errorSave}</div>}
+                            </li>
 
-                                <li>
-                                    <label htmlFor="name">
-                                        Name
-                                    </label>
+                            <li>
+                                <label htmlFor="name">
+                                    Name
+                                </label>
 
-                                    <input type="text" name="name" value={name} id="name" onChange={(e) => setName(e.target.value)}>
-                                    </input>
-                                </li>
+                                <input type="text" name="name" value={name} id="name"
+                                       onChange={(e) => setName(e.target.value)}>
+                                </input>
+                            </li>
 
-                                <li>
-                                    <label htmlFor="price">
-                                        Price
-                                    </label>
+                            <li>
+                                <label htmlFor="price">
+                                    Price
+                                </label>
 
-                                    <input type="text" name="price" value={price} id="price" onChange={(e) => setPrice(e.target.value)}>
-                                    </input>
-                                </li>
+                                <input type="text" name="price" value={price} id="price"
+                                       onChange={(e) => setPrice(e.target.value)}>
+                                </input>
+                            </li>
 
-                                <li>
-                                    <label htmlFor="image">
-                                        Image
-                                    </label>
+                            <li>
+                                <label htmlFor="image">
+                                    Image
+                                </label>
 
-                                    <input type="text" name="image" value={image} id="image" onChange={(e) => setImage(e.target.value)}>
-                                    </input>
-                                </li>
+                                <input type="text" name="image" value={image} id="image"
+                                       onChange={(e) => setImage(e.target.value)}>
+                                </input>
+                            </li>
 
-                                <li>
-                                    <label htmlFor="brand">
-                                        Brand
-                                    </label>
+                            <li>
+                                <label htmlFor="brand">
+                                    Brand
+                                </label>
 
-                                    <input type="text" name="brand" value={brand} id="brand" onChange={(e) => setBrand(e.target.value)}>
-                                    </input>
-                                </li>
+                                <input type="text" name="brand" value={brand} id="brand"
+                                       onChange={(e) => setBrand(e.target.value)}>
+                                </input>
+                            </li>
 
-                                <li>
-                                    <label htmlFor="countInStock">
-                                        Count In Stock
-                                    </label>
+                            <li>
+                                <label htmlFor="countInStock">
+                                    Count In Stock
+                                </label>
 
-                                    <input type="text" name="countInStock" value={countInStock} id="countInStock" onChange={(e) => setCountinStock(e.target.value)}>
-                                    </input>
-                                </li>
+                                <input type="text" name="countInStock" value={countInStock} id="countInStock"
+                                       onChange={(e) => setCountinStock(e.target.value)}>
+                                </input>
+                            </li>
 
-                                <li>
-                                    <label htmlFor="category">
-                                        Category
-                                    </label>
+                            <li>
+                                <label htmlFor="category">
+                                    Category
+                                </label>
 
-                                    <input type="text" name="category" value={category} id="category" onChange={(e) => setCategory(e.target.value)}>
-                                    </input>
-                                </li>
+                                <input type="text" name="category" value={category} id="category"
+                                       onChange={(e) => setCategory(e.target.value)}>
+                                </input>
+                            </li>
 
-                                <li>
-                                    <label htmlFor="description">
-                                        Description
-                                    </label>
+                            <li>
+                                <label htmlFor="description">
+                                    Description
+                                </label>
 
-                                    <textarea type="text" name="description" value={description} id="description" onChange={(e) => setDescription(e.target.value)}>
+                                <textarea type="text" name="description" value={description} id="description"
+                                          onChange={(e) => setDescription(e.target.value)}>
                                     </textarea>
-                                </li>
+                            </li>
 
-                                <li>
-                                    <button type="submit" className="button-primary">{id ? "Update Info" : "Create Product"}</button>
-                                </li>
+                            <li>
+                                <button type="submit"
+                                        className="button-primary">{id ? "Update Info" : "Create Product"}</button>
+                            </li>
 
-                                <li>
-                                    <button type="button" onClick={() => setModalVisible(false)} className="button-primary">Back</button>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
+                            <li>
+                                <button type="button" onClick={() => setModalVisible(false)}
+                                        className="button-primary">Back
+                                </button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
                 }
-
-
                 <div className="product-list">
                     <table>
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Category</th>
-                                <th>Brand</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {products.map(product => (
-                                <tr key={product._id}>
-                                    <td>{product._id}</td>
-                                    <td>{product.name}</td>
-                                    <td>{product.price}</td>
-                                    <td>{product.category}</td>
-                                    <td>{product.brand}</td>
-                                    <td>
-                                        <button className="button" onClick={() => openModal(product)}>Edit</button>
-                                        {' '}
-                                        <button className="button" onClick={() => deleteHandler(product)}>Delete</button>
-                                    </td>
-                                </tr>
-                            ))}
+                        <tr className='tableHead'>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>Brand</th>
+                            <th>Action</th>
+                        </tr>
 
-                        </tbody>
+                        {products.map(product => (
+                            <tr key={product._id} className='tableProduct'>
+                                <td>{product._id}</td>
+                                <td>{product.name}</td>
+                                <td>{product.price}</td>
+                                <td>{product.category}</td>
+                                <td>{product.brand}</td>
+                                <td className='tableProductActions'>
+                                    <button className="button productsButton" onClick={() => openModal(product)}>Edit</button>
+                                    {' '}
+                                    <button className="button productsButton" onClick={() => deleteHandler(product)}>Delete</button>
+                                </td>
+                            </tr>
+                        ))}
                     </table>
                 </div>
             </div>

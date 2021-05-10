@@ -73,6 +73,10 @@ button {
 
 .main {
   grid-area: main;
+  -moz-background-size: 100%; /* Firefox 3.6+ */
+  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+  -o-background-size: 100%; /* Opera 9.6+ */
+  background-size: 100%;
 }
 
 .footer {
@@ -235,8 +239,9 @@ a:hover {
 }
 
 .details li {
-  color: #f0f0f0;
+  color: #000000;
   font-size: 2rem;
+  height: 50px;
 }
 
 .details-image {
@@ -289,9 +294,14 @@ a:hover {
 
 .button {
   padding: 1rem;
+  height: 50%;
   border: .1rem #808080 solid;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.button.productsButton {
+  width: 100%;
 }
 
 .button:hover {
@@ -443,11 +453,32 @@ input {
   width: 95%;
   margin-left: 3rem;
   padding: 5rem 15px 15px 15px;
-  background-color: #e3e3e3;
 }
 
 table {
   width: 100%;
+  text-align: left;
+  background-color: rgb(196, 196, 196);
+}
+
+table .tableHead {
+  height: 50px;
+  background-color: rgba(253, 253, 253, 0.71);
+}
+
+table .tableProduct {
+  height: 100px;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+table .tableProduct td {
+  border-bottom: 1px black solid;
+}
+
+table .tableProduct .tableProductActions {
+  height: 100px;
+  justify-content: space-between;
 }
 
 /* Checkout Steps */
@@ -528,19 +559,16 @@ table {
 /* Profile */
 
 .profile-img {
-  /* background: url('./images/profileImg.png'); */
 }
 
 .profile-container {
   padding-left: 3rem;
   padding-top: 3rem;
   width: 59rem;
-  height: 100vh;
-  background-color: #6a646e;
 }
 
 .profile-container h1 {
-  color: #f0f0f0;
+  color: #000000;
   text-decoration: none;
 }
 
