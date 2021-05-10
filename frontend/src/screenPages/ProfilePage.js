@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import img from '../images/profileImg.png'
-import CartPage from './CartPage';
 
 const ProfilePage = () => {
     const userSignin = useSelector(state => state.userSignin);

@@ -1,19 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 
 const AccessoriesPage = () => {
-    const productList = useSelector(state => state.productList);
+    const productList = useSelector((state) => state.productList);
     const { products, loading, error } = productList;
 
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(listProducts());
-
-        return () => {
-
-        };
+        return () => {};
     }, [])
 
     let productLaptop = products.filter((prod) => prod.category === 'accessories');
@@ -21,7 +18,7 @@ const AccessoriesPage = () => {
         error ? <div>{error}</div> :
             <ul className="products">
                 {
-                    productLaptop.map(product =>
+                    productLaptop.map((product) =>
                         <li className="liProp" key={product._id}>
                             <div className="product">
                                 <Link to={"/product/" + product._id}>
