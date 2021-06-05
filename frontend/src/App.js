@@ -105,7 +105,7 @@ const App = () => {
         </main>
 
         <footer className="footer">
-          All right reserved.
+          All rights reserved.
         </footer>
       </div>
     </BrowserRouter >

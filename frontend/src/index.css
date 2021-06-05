@@ -313,6 +313,11 @@ a:hover {
   height: 5rem;
   border-radius: 0.5rem;
   background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: #b1b1b1;
 }
 
 .button.secondary {
@@ -349,7 +354,7 @@ a:hover {
 
 .cart-action {
   flex: 1 1 20rem;
-  background-color: #f0f0f0;
+  background-color: #black;
   border-radius: 0.5rem;
   padding: 1rem;
 }
@@ -363,10 +368,10 @@ a:hover {
 .cart-list-container li {
   display: flex;
   justify-content: space-between;
-  color: #f0f0f0;
+  color: #000000;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
-  border-bottom: 0.1rem #c0c0c0 solid;
+  border-bottom: 0.1rem #000000 solid;
 }
 
 .cart-list-container li img {
@@ -387,6 +392,10 @@ a:hover {
 .cart-name {
   padding-top: 5rem;
   flex: 8 1;
+}
+
+.numberParagraph {
+  color: #000000;
 }
 
 .cart-price {
