@@ -47,7 +47,7 @@ const CartPage = (props) => {
                                         </Link>
 
                                         <div>
-                                            Number:
+                                            <p className='numberParagraph'>Number:</p>
                                             <select value={item.hmProducts} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}> {/* isn't working onChange */}
                                                 {[...Array(item.countInStock).keys()].map(x =>
                                                     <option key={x + 1} value={x + 1}>{x + 1}</option>

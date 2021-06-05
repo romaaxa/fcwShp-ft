@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState } from 'react';
 import { savePayment } from '../actions/cartActions';
+import { useDispatch } from "react-redux";
 import CheckoutSteps from '../components/CheckoutSteps';
 
 const PaymentPage = (props) => {
